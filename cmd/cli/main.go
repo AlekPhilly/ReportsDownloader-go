@@ -14,8 +14,15 @@ import (
 )
 
 func main() {
-	ticker := flag.String("t", "", "Ticker for stock")
+	ticker := flag.String("s", "", "Ticker for stock")
+	repType := flag.Int("t", 3, "Report type: 1 - Annual, 2 - Account, 3 - IFRS, 4 - Issuer")
 	flag.Parse()
+
+	r := *repType
+	if r < 1 || r > 4 {
+		log.Fatal("Wrong report type!!!")
+	}
+	rt := models.DocType(r + 1)
 
 	if len(*ticker) != 4 {
 		log.Fatal("Wrong ticker!!!")
@@ -28,9 +35,9 @@ func main() {
 
 	info := fetch.FetchInfo(sess, spec["emitent_inn"].(string))
 
-	docs := fetch.FetchDocListPage(sess, info.Id, models.IFRSReport)
+	docs := fetch.FetchDocListPage(sess, info.Id, rt)
 
-	reports := parser.ParseReports(bytes.NewReader(docs))
+	reports := parser.ParseReports(bytes.NewReader(docs), rt)
 
 	fmt.Println(info.Name)
 	fmt.Println(reports[0].ReportType, reports[0].ReportPeriod)
@@ -40,12 +47,4 @@ func main() {
 	fmt.Println(comprRep)
 
 	uzip.UnzipReport(comprRep, true)
-
-	// o, _ := os.Create("out.json")
-	// defer o.Close()
-	// for _, t := range tr {
-	// 	s, _ := json.MarshalIndent(t, "", "  ")
-	// 	fmt.Fprintf(o, "%s\n", s)
-	// }
-
 }

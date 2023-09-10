@@ -10,17 +10,20 @@ import (
 	"golang.org/x/net/html"
 )
 
-func ParseReports(reportsHTML io.Reader) []models.Report {
+func ParseReports(reportsHTML io.Reader, reportType models.DocType) []models.Report {
 	rawReports := parseReportsPage(reportsHTML)
-
 	var reports []models.Report
+	var i int
+	if reportType == models.AnnualReport {
+		i++
+	}
 	for _, rep := range rawReports {
 		var r models.Report
 		r.ReportType = rep[1]
 		r.ReportPeriod = rep[2]
-		r.OriginDate, _ = time.Parse("02.01.2006", rep[3])
-		r.PublicationDate, _ = time.Parse("02.01.2006", rep[4])
-		r.FileLink = rep[5]
+		r.OriginDate, _ = time.Parse("02.01.2006", rep[i+3])
+		r.PublicationDate, _ = time.Parse("02.01.2006", rep[i+4])
+		r.FileLink = rep[i+5]
 		reports = append(reports, r)
 	}
 	return reports
@@ -62,7 +65,9 @@ func parseReportsPage(reportsHTML io.Reader) [][]string {
 				if row == nil {
 					continue
 				}
-				rows = append(rows, row)
+				if len(row) >= 6 {
+					rows = append(rows, row)
+				}
 				row = nil
 			}
 			if t.Data == "table" {
