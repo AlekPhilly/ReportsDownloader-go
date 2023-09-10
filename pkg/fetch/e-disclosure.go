@@ -15,9 +15,9 @@ import (
 	"github.com/alekphilly/ReportsDownloader-go/pkg/models"
 )
 
-func DownloadReport(rep *models.Report, dstDir string) string {
+func DownloadReport(sess *Session, rep *models.Report, dstDir string) string {
 
-	cookies := getCookie(companySearchURL)
+	cookies := sess.Cookie
 
 	req, err := http.NewRequest(http.MethodGet, rep.FileLink, nil)
 	if err != nil {
@@ -37,8 +37,12 @@ func DownloadReport(rep *models.Report, dstDir string) string {
 		log.Fatal(err)
 	}
 
+	// fmt.Println(res.Header["Content-Disposition"])
+
 	v := res.Header["Content-Disposition"][0]
 	filename := strings.TrimSpace(strings.Replace(strings.Split(v, ";")[1], "filename=", "", 1))
+	filename = strings.ReplaceAll(filename, "\"", "")
+	filename = strings.ReplaceAll(filename, "'", "")
 
 	defer res.Body.Close()
 
@@ -49,12 +53,12 @@ func DownloadReport(rep *models.Report, dstDir string) string {
 
 	io.Copy(f, res.Body)
 
-	return filename
+	return path.Join(dstDir, filename)
 }
 
-func FetchDocListPage(companyId int, t models.DocType) []byte {
+func FetchDocListPage(sess *Session, companyId int, t models.DocType) []byte {
 
-	cookies := getCookie(companySearchURL)
+	cookies := sess.Cookie
 
 	docUrl, _ := url.Parse(companyDocURL)
 
@@ -90,9 +94,9 @@ func FetchDocListPage(companyId int, t models.DocType) []byte {
 	return docList.Bytes()
 }
 
-func FetchInfo(inn string) models.CompanyInfo {
+func FetchInfo(sess *Session, inn string) models.CompanyInfo {
 
-	cookies := getCookie(companySearchURL)
+	cookies := sess.Cookie
 
 	form := url.Values{}
 	form.Set("textfield", inn)
@@ -139,35 +143,4 @@ func FetchInfo(inn string) models.CompanyInfo {
 	}
 
 	return companiesList.CompaniesList[0]
-}
-
-func getCookie(domain string) []*http.Cookie {
-
-	reqURL, err := url.Parse(domain)
-	if err != nil {
-		log.Fatal("Problem with URL: ")
-	}
-
-	req, err := http.NewRequest(http.MethodGet, reqURL.String(), nil)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	req.Header.Set("User-Agent", userAgent)
-
-	client := newClient()
-
-	res, err := client.Do(req)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	return setCookieHeader(res.Header.Get("Set-Cookie"))
-}
-
-func setCookieHeader(cookie string) []*http.Cookie {
-	header := http.Header{}
-	header.Add("Set-Cookie", cookie)
-	req := http.Response{Header: header}
-	return req.Cookies()
 }
