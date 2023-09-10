@@ -46,7 +46,7 @@ func DownloadReport(sess *Session, rep *models.Report, dstDir string) string {
 
 	defer res.Body.Close()
 
-	_ = os.Mkdir(dstDir, os.ModePerm)
+	_ = os.MkdirAll(dstDir, os.ModePerm)
 
 	f, _ := os.Create(path.Join(dstDir, filename))
 	defer f.Close()

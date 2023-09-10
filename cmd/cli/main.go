@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"path"
 	"strings"
 
 	"github.com/alekphilly/ReportsDownloader-go/pkg/fetch"
@@ -12,6 +13,8 @@ import (
 	"github.com/alekphilly/ReportsDownloader-go/pkg/parser"
 	"github.com/alekphilly/ReportsDownloader-go/pkg/uzip"
 )
+
+const repDir = "reports"
 
 func main() {
 	ticker := flag.String("s", "", "Ticker for stock")
@@ -42,9 +45,9 @@ func main() {
 	fmt.Println(info.Name)
 	fmt.Println(reports[0].ReportType, reports[0].ReportPeriod)
 
-	comprRep := fetch.DownloadReport(sess, &reports[0], "repDir")
+	comprRep := fetch.DownloadReport(sess, &reports[0], path.Join(repDir, info.Name))
 
-	fmt.Println(comprRep)
+	fmt.Println("Saved to:", comprRep)
 
 	uzip.UnzipReport(comprRep, true)
 }
