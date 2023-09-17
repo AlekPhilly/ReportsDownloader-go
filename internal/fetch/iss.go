@@ -52,13 +52,11 @@ func FetchSpec(ticker string) (map[string]any, error) {
 	if err != nil {
 		fmt.Printf("error decoding json: %s\n", err)
 	}
-	// fmt.Printf("%v", spec)
 
 	return cleanSpec(ticker, spec), nil
 }
 
 func requestSpec(req *http.Request) ([]byte, error) {
-
 	client := newClient()
 	res, err := client.Do(req)
 	if err != nil {
@@ -76,7 +74,6 @@ func requestSpec(req *http.Request) ([]byte, error) {
 }
 
 func specURL(ticker string) string {
-
 	specReq, err := url.Parse("https://iss.moex.com/iss/securities.json")
 	if err != nil {
 		log.Fatal(err)

@@ -12,11 +12,10 @@ import (
 	"path"
 	"strings"
 
-	"github.com/alekphilly/ReportsDownloader-go/pkg/models"
+	"github.com/alekphilly/ReportsDownloader-go/internal/models"
 )
 
 func DownloadReport(sess *Session, rep *models.Report, dstDir string) string {
-
 	cookies := sess.Cookie
 
 	req, err := http.NewRequest(http.MethodGet, rep.FileLink, nil)
@@ -57,7 +56,6 @@ func DownloadReport(sess *Session, rep *models.Report, dstDir string) string {
 }
 
 func FetchDocListPage(sess *Session, companyId int, t models.DocType) []byte {
-
 	cookies := sess.Cookie
 
 	docUrl, _ := url.Parse(companyDocURL)
@@ -95,7 +93,6 @@ func FetchDocListPage(sess *Session, companyId int, t models.DocType) []byte {
 }
 
 func FetchInfo(sess *Session, inn string) models.CompanyInfo {
-
 	cookies := sess.Cookie
 
 	form := url.Values{}

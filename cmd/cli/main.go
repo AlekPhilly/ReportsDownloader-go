@@ -11,10 +11,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alekphilly/ReportsDownloader-go/pkg/fetch"
-	"github.com/alekphilly/ReportsDownloader-go/pkg/models"
-	"github.com/alekphilly/ReportsDownloader-go/pkg/parser"
-	"github.com/alekphilly/ReportsDownloader-go/pkg/uzip"
+	"github.com/alekphilly/ReportsDownloader-go/internal/fetch"
+	"github.com/alekphilly/ReportsDownloader-go/internal/models"
+	"github.com/alekphilly/ReportsDownloader-go/internal/parser"
+	"github.com/alekphilly/ReportsDownloader-go/internal/uzip"
 )
 
 const repDir = "reports"
