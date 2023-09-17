@@ -11,7 +11,11 @@ import (
 )
 
 func UnzipReport(filepath string, removeArchive bool) {
-	r, _ := zip.OpenReader(filepath)
+	r, err := zip.OpenReader(filepath)
+	if err != nil {
+		fmt.Printf("Failed to open archive %s. Maybe not a ZIP file?\n", filepath)
+		return
+	}
 	defer r.Close()
 
 	dir, file := path.Split(filepath)
