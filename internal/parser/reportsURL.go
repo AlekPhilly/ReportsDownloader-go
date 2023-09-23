@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alekphilly/ReportsDownloader-go/internal/models"
+	"github.com/AlekPhilly/ReportsDownloader-go/internal/models"
 	"golang.org/x/net/html"
 )
 

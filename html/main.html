@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск отчетов компаний, торгующихся на Мосбирже</title>
+</head>
+<body>
+    <h1>Поиск отчетов компаний, торгующихся на Мосбирже</h1>
+    <form action="/search" method="post">
+        <div>
+            <label for=ticker>Введите тикер компании:</label>
+            <input type="search" name="ticker" id="tickerInput" required minlength="4" maxlength="4">
+        </div>
+        <div>
+            <label for="reportType">Выберите тип отчета:</label>
+            <select name="reportType" id="reportType">
+                <option value=2>Годовые отчеты</option>
+                <option value=3>Бухгалтерская отчетность</option>
+                <option value=4>Отчеты по МСФО</option>
+                <option value=5>Отчеты эмитента</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Искать!">
+        </div>
+    </form>
+</body>
+</html>

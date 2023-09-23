@@ -11,13 +11,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alekphilly/ReportsDownloader-go/internal/fetch"
-	"github.com/alekphilly/ReportsDownloader-go/internal/models"
-	"github.com/alekphilly/ReportsDownloader-go/internal/parser"
-	"github.com/alekphilly/ReportsDownloader-go/internal/uzip"
+	"github.com/AlekPhilly/ReportsDownloader-go/internal/fetch"
+	"github.com/AlekPhilly/ReportsDownloader-go/internal/models"
+	"github.com/AlekPhilly/ReportsDownloader-go/internal/parser"
+	"github.com/AlekPhilly/ReportsDownloader-go/internal/uzip"
 )
 
-const repDir = "reports"
+const repDir = "./reports"
 
 func main() {
 	ticker := flag.String("s", "", "Ticker for stock")

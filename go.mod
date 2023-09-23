@@ -1,4 +1,4 @@
-module github.com/alekphilly/ReportsDownloader-go
+module github.com/AlekPhilly/ReportsDownloader-go
 
 go 1.21.0
 

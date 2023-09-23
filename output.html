@@ -1,0 +1,868 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Интерфакс – Сервер раскрытия информации</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	<meta name="keywords" content="">
+	<meta name="description">
+	<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="ver" content="1.0.0.638295696039970124_" />
+	<link rel="stylesheet" href="/src/css/site.bundle.css?v=1.0.0.638295696039970124_" />
+	
+
+<script type="text/javascript">
+	var yandexMetrikaJsCounterId = 53780800;
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+	(function (m, e, t, r, i, k, a) {
+		m[i] = m[i]
+			|| function () {
+				(m[i].a = m[i].a || []).push(arguments);
+			};
+		m[i].l = 1 * new Date();
+		k = e.createElement(t),
+			a = e.getElementsByTagName(t)[0],
+			k.async = 1,
+			k.src = r,
+			a.parentNode.insertBefore(k, a);
+	})(window,
+		document,
+		"script",
+		"https://mc.yandex.ru/metrika/tag.js",
+		"ym");
+
+	ym(53780800, "init", {
+		clickmap: true,
+		trackLinks: true,
+		accurateTrackBounce: true
+	});
+</script>
+<!-- /Yandex.Metrika counter -->
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+	//<![CDATA[
+	var _tmr = _tmr || [];
+	_tmr.push({ id: '650834', type: 'pageView', start: (new Date()).getTime() });
+	(function (d, w) {
+		var ts = d.createElement('script');
+		ts.type = 'text/javascript';
+		ts.async = true;
+		ts.src = (d.location.protocol === 'https:' ? 'https:' : 'http:') + '//top-fwz1.mail.ru/js/code.js';
+		var f = function () {
+			var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ts, s);
+		};
+		if (w.opera == "[object Opera]") {
+			d.addEventListener("DOMContentLoaded", f, false);
+		} else {
+			f();
+		}
+	})(document, window);
+			//]]></script>
+<!-- //Rating@Mail.ru counter -->
+
+	
+	<script>window.yaContextCb = window.yaContextCb || []</script>
+	<script src="https://yandex.ru/ads/system/context.js" async></script>
+	
+	<script src="/src/js/require.min.js?v=1.0.0.638295696039970124_"></script>
+	<script>
+		require(["/src/js/config.js?v=1.0.0.638295696039970124_"], _ => require(['/src/js/ed.company.list-files.js']));
+	</script>
+	
+
+
+<script>
+        var params = {
+            url: "https://e-disclosure.ru/portal/files.aspx?id=3043&amp;type=3",
+            userIp: "185.97.201.178",
+            userAgent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0",
+            referrer: "",
+            browser: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0",
+            targetResource: "Files",
+            parameter: "3",
+            companyId: "3043",
+            logDate: "2023-09-06 23:32:13.732"
+        };
+
+        ym(53780800, "params", { params: params });
+</script>
+
+
+
+		<base href="https://e-disclosure.ru/" target="_self"/>
+</head>
+<body class="site-page">
+	
+
+<noscript>
+	<div>
+		<img src="https://mc.yandex.ru/watch/53780800" style="position: absolute; left: -9999px;" alt="" />
+	</div>
+	<div style="position: absolute; left: -10000px;">
+		<img src="//top-fwz1.mail.ru/counter?id=650834;js=na" style="border: 0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+	</div>
+	<img src="//counter.rambler.ru/top100.cnt?pid=2928424" alt="Топ-100" />
+</noscript>
+
+	
+<div class="login-window site-page__login-window" id="enter" style="display: none;">
+    <div class="login-window__title title_basic">
+        Вход
+        <div class="right">
+            <img src="/images/close.png"
+                 width="14"
+                 height="14"
+                 alt="Закрыть окно"
+                 style="cursor: pointer"
+                 id="closeLoginButton"/>
+        </div>
+    </div>
+    <div class="login-window__content">
+        <form id="loginForm" class="login-form">
+	        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KGBqhstQ8xJuxrwCFpEqRzlqpnSnmRqCKUc5y9ux7XqyyOurzawO7_eEuqLPVzNTSWXl_DAL9hOkvTl1y5esd9pQknb6kdhicmqenUayEQUYHBOs-V5C96mGiNohD93C2hp6aw-43iq8TuJ1ASnd7Y" />
+	        <div class="login-form__wrapper">
+                <div class="login-form__input-wrapper">Логин/ИНН: <input type="text" id="login" name="login" maxlength="50" class="login-form__input" /></div>
+                <div class="login-form__input-wrapper">Пароль: <input type="password" name="password" id="password" class="login-form__input" /></div>
+                <div class="login-form__errors"><span class="login-form__error login-form__error_hiden"></span></div>
+                <div style="text-align: center;">
+	                <button type="button" class="button button_bold login-form__login-button">Войти</button>
+                </div>
+                <div class="login-form__forgot-password">Забыли пароль? <a href="https://www.e-disclosure.ru/password-recovery">Восстановить пароль</a></div>
+            </div>
+        </form>
+    </div>
+</div>
+	<div class="site-page__body-inside">
+		<header class="site-header">
+			<div class="site-header__top">
+				<div class="site-header__site-logo">
+					<a href="/">
+						<img alt="Центр раскрытия " src="/images/logo.gif" width="40" height="40" />
+					</a>
+				</div>
+				<div class="site-header__site-title">
+					<h1>
+						<a href="/">
+							ЦЕНТР&nbsp;РАСКРЫТИЯ<br/><span>КОРПОРАТИВНОЙ&nbsp;ИНФОРМАЦИИ</span>
+						</a>
+					</h1>
+				</div>
+				<div class="site-header__ifax-logo">
+					<a href="http://www.interfax.ru">
+						<img alt="Интерфакс" src="/images/interfax.png" width="142" height="42" />
+					</a>
+				</div>
+				<div class="site-header__contact">
+					Служба раскрытия информации:<br>
+					тел.: <strong>+7 (495) 787-5213, 8-800-200-4818 (в будни, с 08.00 до 20.00 мск)</strong>
+				</div>
+				<div class="site-header__reg">
+					<span style="vertical-align: middle;">Идентификационный код Распространителя информации №0003</span>
+					<button type="button" class="enter">Вход</button>
+					<a class="reg" href="https://emitent.e-disclosure.ru/registration">Регистрация</a>
+				</div>
+			</div>
+			
+<div id="menu_wrap">
+	<div id="menucontainer" style="padding: 0 1% 0 1%; display: flex; flex-direction: row;">
+		<ul id="menulist">
+					<li>
+						<a class="dash" href="/">главная страница</a>
+					</li>
+					<li>
+						<a class="dash" href="/poisk-po-kompaniyam">поиск по компаниям</a>
+					</li>
+					<li>
+						<a class="dash" href="/poisk-po-soobshheniyam">поиск по сообщениям</a>
+					</li>
+					<li>
+							<a class="dash" href="#" onclick="return false;">
+								<img src="/images/open.png" width="8" height="6" alt="" />&nbsp;сервисы для компаний
+							</a>
+						<ul>
+									<li>
+											<a class="open" href="/servisy-dlya-kompanij/raskrytie-v-lente-novostej">раскрытие в ленте новостей</a>
+										<ul>
+												<li>
+													<a href="/servisy-dlya-kompanij/raskrytie-v-lente-novostej/informirovanie-birzhi">информирование биржи</a>
+												</li>
+												<li>
+													<a href="/servisy-dlya-kompanij/raskrytie-v-lente-novostej/prioritetnoe-raskrytie">приоритетное раскрытие</a>
+												</li>
+												<li>
+													<a href="/servisy-dlya-kompanij/raskrytie-v-lente-novostej/vizualizaciya-soobshhenij">визуализация сообщений</a>
+												</li>
+										</ul>
+									</li>
+									<li>
+											<a class="open" href="/servisy-dlya-kompanij/raskrytie-na-sajte">раскрытие на сайте</a>
+										<ul class="site-menu__item-260">
+												<li>
+													<a href="/servisy-dlya-kompanij/raskrytie-na-sajte/informirovanie-aktsionerov">информирование акционеров</a>
+												</li>
+												<li>
+													<a href="/servisy-dlya-kompanij/raskrytie-na-sajte/domen-tret&#x27;ego-urovnya">домен 3 уровня</a>
+												</li>
+												<li>
+													<a href="/servisy-dlya-kompanij/raskrytie-na-sajte/dobrovol&#x27;noe-raskrytie">добровольное раскрытие</a>
+												</li>
+												<li>
+													<a href="/servisy-dlya-kompanij/raskrytie-na-sajte/sub&#x27;ektam-rynka-ehlektroehnergii">субъектам рынка электроэнергии</a>
+												</li>
+										</ul>
+									</li>
+									<li>
+										<a href="/servisy-dlya-kompanij/raskrytie-pod-ehmbargo">раскрытие под эмбарго</a>
+									</li>
+									<li>
+										<a href="/servisy-dlya-kompanij/edinoe-okno-s-nrd">единое окно с нрд</a>
+									</li>
+									<li>
+										<a href="/servisy-dlya-kompanij/sinhronizaciya-i-otslezhivanie-publikacij">синхронизация и отслеживание публикаций</a>
+									</li>
+									<li>
+											<a class="open" href="/servisy-dlya-kompanij/elektronnaya-anketa">электронная анкета</a>
+										<ul>
+												<li>
+													<a href="/servisy-dlya-kompanij/elektronnaya-anketa/programma-dlya-sostavleniya-otcheta-ehmitenta">программа для составления отчета эмитента</a>
+												</li>
+												<li>
+													<a href="/servisy-dlya-kompanij/elektronnaya-anketa/programma-dlya-podgotovki-nefinansovoj-otchetnosti">программа для подготовки нефинансовой отчетности</a>
+												</li>
+										</ul>
+									</li>
+									<li>
+										<a href="/servisy-dlya-kompanij/servis-dlya-agentov-po-razmeshheniyu">сервис для агентов по размещению</a>
+									</li>
+									<li>
+										<a href="/servisy-dlya-kompanij/esg-raskrytie">esg-раскрытие</a>
+									</li>
+									<li>
+											<a class="open" href="/servisy-dlya-kompanij/ir-uslugi">ir-услуги</a>
+										<ul>
+												<li>
+													<a href="/servisy-dlya-kompanij/ir-uslugi/ir-uslugi">календарь инвестора</a>
+												</li>
+										</ul>
+									</li>
+						</ul>
+					</li>
+					<li>
+							<a class="dash" href="#" onclick="return false;">
+								<img src="/images/open.png" width="8" height="6" alt="" />&nbsp;получение информации
+							</a>
+						<ul>
+									<li>
+										<a href="/poluchenie-informacii/shlyuz-api">шлюз (api)</a>
+									</li>
+									<li>
+										<a href="/poluchenie-informacii/email-rassylka">email-рассылка</a>
+									</li>
+									<li>
+										<a href="/poluchenie-informacii/vygruzka-na-ftp">выгрузка на ftp</a>
+									</li>
+									<li>
+										<a href="/poluchenie-informacii/otchеt-po-soobshheniyam">отчет по сообщениям</a>
+									</li>
+						</ul>
+					</li>
+					<li>
+							<a class="dash" href="#" onclick="return false;">
+								<img src="/images/open.png" width="8" height="6" alt="" />&nbsp;все о раскрытии
+							</a>
+						<ul>
+									<li>
+										<a href="/vse-o-raskrytii/vestnik-centra-raskrytiya-informacii">вестник центра раскрытия информации</a>
+									</li>
+									<li>
+										<a href="/vse-o-raskrytii/reglament-raskrytiya">технические условия</a>
+									</li>
+									<li>
+										<a href="/vse-o-raskrytii/kontrol-za-insayderskoy-informaciey">контроль за инсайдерской информацией</a>
+									</li>
+									<li>
+										<a href="/vse-o-raskrytii/primenenie-elektronnoj-podpisi">применение электронной подписи</a>
+									</li>
+									<li>
+										<a href="/vse-o-raskrytii/normativnye-dokumenty">нормативные документы</a>
+									</li>
+									<li>
+										<a href="/vse-o-raskrytii/nashi-publikatsii">наши публикации</a>
+									</li>
+									<li>
+											<a class="open" href="/vse-o-raskrytii/premiya-za-otkrytost&#x27;">премия за открытость</a>
+										<ul>
+												<li>
+													<a href="/vse-o-raskrytii/premiya-za-otkrytost&#x27;/o-premii">о премии</a>
+												</li>
+												<li>
+													<a href="/vse-o-raskrytii/premiya-za-otkrytost&#x27;/kompanuii-pobediteli">компании-победители</a>
+												</li>
+												<li>
+													<a href="/vse-o-raskrytii/premiya-za-otkrytost&#x27;/press-relizy">пресс-релизы</a>
+												</li>
+										</ul>
+									</li>
+									<li>
+										<a href="/vse-o-raskrytii/faq">вопросы и ответы</a>
+									</li>
+						</ul>
+					</li>
+					<li>
+							<a class="dash" href="#" onclick="return false;">
+								<img src="/images/open.png" width="8" height="6" alt="" />&nbsp;о проекте
+							</a>
+						<ul>
+									<li>
+										<a href="/o-proekte/o-proekte">о проекте</a>
+									</li>
+									<li>
+										<a href="/o-proekte/reklama-na-sajte">реклама на сайте</a>
+									</li>
+						</ul>
+					</li>
+		</ul>
+		<div style="flex: 1;"></div>
+		<div style="padding-top: 5px;">
+			<a href="https://t.me/edisclosure" target="_blank" title="telegram">
+				<img src="/images/telegram.png" width="30" height="30" />
+			</a>
+		</div>
+	</div>
+</div>		</header>
+		<div class="site-middle">
+			
+
+
+<div class="site-middle__std-inside">
+	<div class="std-main-content std-inside__std-main-content">
+		
+
+
+
+<div class="title_basic">Карточка компании</div>
+
+
+
+<div class="gray_menu">
+    <div class="menu_wrap" style="position: relative; left: 0;">
+        <div class="table full">
+            <div class="cell">
+                <ul id="cssmenu">
+                    <li>
+                        <a href="/portal/company.aspx?id=3043" class="drop">
+                            <span>Карточка компании</span>
+                        </a>
+                    </li>
+                        <li>
+                            <a href="/portal/company-3043/dokumenty-kompanii" class="drop">
+                                <img src="/images/open.png" alt="" /><span>Документация</span>
+                            </a>
+                            <ul>
+                                    <li>
+                                        <a href="/portal/files.aspx?id=3043&type=1">Устав и внутренние документы</a>
+                                    </li>
+                                    <li>
+                                        <a href="/portal/files.aspx?id=3043&type=7">Эмиссионные документы</a>
+                                    </li>
+                                    <li>
+                                        <a href="/portal/files.aspx?id=3043&type=10">Прочие документы</a>
+                                    </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/portal/company-3043/otchyotnost-kompanii" class="drop">
+                                <img src="/images/open.png" alt="" /><span>Отчетность</span>
+                            </a>
+                            <ul>
+                                    <li>
+                                        <a href="/portal/files.aspx?id=3043&type=2">Годовая</a>
+                                    </li>
+                                    <li>
+                                        <a href="/portal/files.aspx?id=3043&type=3">Бухгалтерская (финансовая)</a>
+                                    </li>
+                                    <li>
+                                        <a href="/portal/files.aspx?id=3043&type=4">Сводная (консолидированная)</a>
+                                    </li>
+                                    <li>
+                                        <a href="/portal/files.aspx?id=3043&type=5">Отчеты эмитента</a>
+                                    </li>
+                            </ul>
+                        </li>
+                </ul>
+            </div>
+            <div class="cell menu-search">
+				<button type="button" class="link-button js-show-search" style="vertical-align: middle">
+                    Поиск<img src="/images/vline.png" style="padding: 0 4px;"/>Печать реестров
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="searchWindow" class="search-window js-company-window">
+	<div class="title_basic" style="padding-left: 0;">
+		<span>Выбор параметров</span>
+		<div class="right">
+			<img src="/images/close.png" class="close-button js-close-button" alt="Закрыть окно" title="Закрыть окно" />
+		</div>
+	</div>
+	<form id="searchForm">
+		<div class="cont_wrap">
+			<div class="search-type">
+				<input type="radio" name="sType" id="sEvents" value="0" checked="checked"/>
+				<label for="sEvents">события</label>
+				<input type="radio" name="sType" id="sFiles" value="1"/>
+				<label for="sFiles">документы</label>
+			</div>
+			<div style="text-align: center; margin-top: 7px; margin-bottom: 5px;">
+				<span class="js-period-title"></span>
+			</div>
+			<div style="text-align: center; margin: 5px;">
+				С:
+				<span class="select-date">
+					<input type="text" class="js-date" name="esDateStart" id="esDateStart" value="30.08.2023"
+					       data-rule-required="true" 
+					       data-msg-required="Дата начала должна быть заполнена."
+					       data-rule-date="true" 
+					       data-msg-date="Дата начала должна быть датой в формате дд.мм.гггг."/>
+				</span>
+				По:
+				<span class="select-date">
+					<input type="text" class="js-date" name="esDateFinish" id="esDateFinish" value="06.09.2023"
+					       data-rule-required="true" 
+					       data-msg-required="Дата окончания должна быть заполнена."
+					       data-rule-date="true" 
+					       data-msg-date="Дата окончания должна быть датой в формате дд.мм.гггг."
+					       data-rule-dategreater="esDateStart" 
+					       data-msg-dategreater="Дата начала периода формирования реестра не должна быть больше даты окончания."/>
+				</span>
+			</div>
+			<div id="errors" class="error-block"></div>
+			<div class="btn-wrapper">
+				<a href="#" class="button js-find-button">Подтвердить выбор</a>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+
+<div class="infoblock">
+    <h2>ПАО Сбербанк</h2>
+</div>
+<div id="cont_wrap">
+
+
+    <div class="title_middle">Бухгалтерская (финансовая) отчетность</div>
+
+    <span style="font-weight: bold">Дополнительная информация для заинтересованных лиц в отношении документов, размещенных в настоящем разделе:</span>
+    <br />
+    <div style="padding: 4px 0 8px 8px">В текст пояснительной информации, входящей в  состав годовой бухгалтерской (финансовой) отчетности ОАО «Сбербанк России» за 2013 год, внесены незначительные стилистические изменения. Показатели бухгалтерской отчетности не изменились.</div>
+
+    <div class="spaceTbl">
+
+
+<table class="zebra noBorderTbl centerHeader files-table">
+    <tr>
+        <th class="row-number-header">№</th>
+                <th class="type-header">Тип документа</th>
+                    <th>Отчетный период</th>
+                <th>Дата наступления основания<br/> для опубликования на сайте</th>
+                    <th>Дата раз&shy;ме&shy;ще&shy;ния</th>
+            <th class="file-header">Файл</th>
+            <th class="cert-header"></th>
+    </tr>
+
+
+        <tr>
+            <td rowspan="" class="row-number-cell">1</td>
+            <td class="type-cell">Промежуточная бухгалтерская отчетность (все формы)</td>
+                        <td>2023, 6 месяцев</td>
+                        <td class="date-cell">17.08.2023</td>
+                        <td class="date-cell">22.08.2023</td>
+                <td rowspan="" class="file-cell">
+                    <a class="file-link"
+                       href="https://e-disclosure.ru/portal/FileLoad.ashx?Fileid=1808256"
+                       data-fileid="1808256">
+                        zip,&nbsp;2,39&nbsp;МБ
+                    </a>
+                </td>
+                <td rowspan="" class="cert-cell">
+						<a href="/Company/Certificate/1808256" class="cert">
+                            <img src="/images/cert.gif" alt="Скачать сертификат" title="Скачать сертификат" />
+                        </a>
+                </td>
+        </tr>
+        <tr>
+            <td rowspan="" class="row-number-cell">2</td>
+            <td class="type-cell">Промежуточная бухгалтерская отчетность (все формы)</td>
+                        <td>2023, 3 месяца</td>
+                        <td class="date-cell">23.05.2023</td>
+                        <td class="date-cell">24.05.2023</td>
+                <td rowspan="" class="file-cell">
+                    <a class="file-link"
+                       href="https://e-disclosure.ru/portal/FileLoad.ashx?Fileid=1794828"
+                       data-fileid="1794828">
+                        zip,&nbsp;2,31&nbsp;МБ
+                    </a>
+                </td>
+                <td rowspan="" class="cert-cell">
+						<a href="/Company/Certificate/1794828" class="cert">
+                            <img src="/images/cert.gif" alt="Скачать сертификат" title="Скачать сертификат" />
+                        </a>
+                </td>
+        </tr>
+        <tr>
+            <td rowspan="" class="row-number-cell">3</td>
+            <td class="type-cell">Годовая бухгалтерская отчетность (все формы)</td>
+                        <td>2022</td>
+                        <td class="date-cell">10.03.2023</td>
+                        <td class="date-cell">13.03.2023</td>
+                <td rowspan="" class="file-cell">
+                    <a class="file-link"
+                       href="https://e-disclosure.ru/portal/FileLoad.ashx?Fileid=1781166"
+                       data-fileid="1781166">
+                        zip,&nbsp;4,23&nbsp;МБ
+                    </a>
+                </td>
+                <td rowspan="" class="cert-cell">
+						<a href="/Company/Certificate/1781166" class="cert">
+                            <img src="/images/cert.gif" alt="Скачать сертификат" title="Скачать сертификат" />
+                        </a>
+                </td>
+        </tr>
+</table>
+    </div>
+    <div class="pagingblock"></div>
+    <div id="treatAsSignedNotificationWindow" class="search-window" style="height: 100px;">
+        <div class="title_basic" style="padding-left: 0;">
+            <span></span>
+            <div class="right">
+                <img src="/images/close.png" class="close-button treat-as-signed-notification-window-close-button" alt="Закрыть окно" title="Закрыть окно" />
+            </div>
+        </div>
+        <div>
+            <div class="cont_wrap">
+                Файл опубликован с временным разрешением публикации без ЭП
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="hCompanyId" name="hCompanyId" value="3043" />
+	</div>
+	<div class="anons-news-tech std-inside__anons-news-tech">
+		<div id="adfox_168173373305942583"></div>
+		<div class="anons-news-tech__block">
+			
+
+
+
+<div class="news">
+	<div class="small-news-list__title">Анонсы</div>
+        <div class="time left">
+			<div class="date left">01.07.2023 - 30.12.2023</div>
+            <div class="graytext rightCity"></div>
+        </div>
+        <div class="listitem full-width">
+			<a class="blacklink" href="/vse-anonsy/anons/1061">График семинаров на 2023 год по теме "Обзор требований новой редакции Положения о раскрытии информации 714-П. Взаимодействие с акционерами. Внесение информации в Федресурс"</a>
+        </div>
+        <div class="time left">
+			<div class="date left">01.07.2023 - 30.12.2023</div>
+            <div class="graytext rightCity"></div>
+        </div>
+        <div class="listitem full-width">
+			<a class="blacklink" href="/vse-anonsy/anons/1203">График семинаров на 2023 год по теме "Отчет эмитента, существенные факты, инсайд. Порядок раскрытия информации в соответствии со ст.30 ФЗ о РЦБ, а также инсайдерской информации"</a>
+        </div>
+        <div class="time left">
+			<div class="date left">07.09.2023 - 08.09.2023</div>
+            <div class="graytext rightCity">Онлайн</div>
+        </div>
+        <div class="listitem full-width">
+			<a class="blacklink" href="/vse-anonsy/anons/1317">Изменения в корпоративном законодательстве – 2023. Взаимодействие с акционерами и нерезидентами. Раскрытие и «закрытие» информации с 1.04.2023</a>
+        </div>
+        <div class="time left">
+			<div class="date left">12.09.2023 - 14.09.2023</div>
+            <div class="graytext rightCity">Иркутск -- Байкал</div>
+        </div>
+        <div class="listitem full-width">
+			<a class="blacklink" href="/vse-anonsy/anons/1318">Расширенный семинар «Изменения в корпоративном законодательстве – 2023. Взаимодействие с акционерами. Выплата дивидендов. Раскрытие и «закрытие» информации с учётом изменений в регулировании»</a>
+        </div>
+        <div class="time left">
+			<div class="date left">26.09.2023 - 27.09.2023</div>
+            <div class="graytext rightCity">Челябинск</div>
+        </div>
+        <div class="listitem full-width">
+			<a class="blacklink" href="/vse-anonsy/anons/1321">Изменения в корпоративном законодательстве – 2023. Взаимодействие с акционерами и нерезидентами. Раскрытие и «закрытие» информации с 1.04.2023</a>
+        </div>
+</div>
+ 
+            <a class="button button_light anons-news-tech__button" href="/vse-anonsy">Все анонсы</a>
+		</div>
+		<div class="anons-news-tech__block">
+			
+
+
+<div class="news">
+	<div class="small-news-list__title">Новости</div>
+        <div class="time">
+			<span class="date">06.09.2023</span>
+            <span class="graytext"></span>
+        </div>
+        <div class="listitem">
+			<a class="blacklink" href="/vse-novosti/novost/5631">FASB обязал компании США детализировать налоговые платежи</a>
+        </div>
+        <div class="time">
+			<span class="date">04.09.2023</span>
+            <span class="graytext"></span>
+        </div>
+        <div class="listitem">
+			<a class="blacklink" href="/vse-novosti/novost/5629">Необходимо поработать над упрощением процедуры IPO - глава комитета Госдумы</a>
+        </div>
+        <div class="time">
+			<span class="date">04.09.2023</span>
+            <span class="graytext"></span>
+        </div>
+        <div class="listitem">
+			<a class="blacklink" href="/vse-novosti/novost/5628">Британские компании констатируют рост регулятивной нагрузки из-за ESG-раскрытия</a>
+        </div>
+        <div class="time">
+			<span class="date">04.09.2023</span>
+            <span class="graytext"></span>
+        </div>
+        <div class="listitem">
+			<a class="blacklink" href="/vse-novosti/novost/5627">ISSB намерен обеспечить максимальную совместимость своих стандартов с европейскими</a>
+        </div>
+        <div class="time">
+			<span class="date">01.09.2023</span>
+            <span class="graytext"></span>
+        </div>
+        <div class="listitem">
+			<a class="blacklink" href="/vse-novosti/novost/5626">«Вестник раскрытия» рассказывает о начале внедрения новых глобальных ESG-стандартов</a>
+        </div>
+</div>
+ 
+            <a class="button button_light anons-news-tech__button" href="/vse-novosti">Все новости</a>
+		</div>
+		<div id="adfox_168173386396589028"></div>
+		<div id="adfox_16817338660869469"></div>
+		<div id="adfox_168173386897027439"></div>
+		<div id="adfox_168173387120063137"></div>
+		<div class="anons-news-tech__block">
+			
+
+
+<div class="news">
+	<div class="small-news-list__title">Техническая информация</div>
+        <div class="time">
+			<span class="date">30.08.2023</span>
+            <span class="graytext"></span>
+        </div>
+        <div class="listitem">
+			<a class="blacklink" href="/TechInfo/Index/85">Технические работы на сайте 30 августа 2023 года</a>
+        </div>
+        <div class="time">
+			<span class="date">16.08.2023</span>
+            <span class="graytext"></span>
+        </div>
+        <div class="listitem">
+			<a class="blacklink" href="/TechInfo/Index/84">Сообщение о техническом сбое 16 августа 2023 года</a>
+        </div>
+        <div class="time">
+			<span class="date">04.08.2023</span>
+            <span class="graytext"></span>
+        </div>
+        <div class="listitem">
+			<a class="blacklink" href="/TechInfo/Index/82">О работе электронной подписи на сайте e-disclosure после 1 сентября 2023 года</a>
+        </div>
+        <div class="time">
+			<span class="date">26.07.2023</span>
+            <span class="graytext"></span>
+        </div>
+        <div class="listitem">
+			<a class="blacklink" href="/TechInfo/Index/81">Технические работы на сайте 26.07.2023</a>
+        </div>
+        <div class="time">
+			<span class="date">18.07.2023</span>
+            <span class="graytext"></span>
+        </div>
+        <div class="listitem">
+			<a class="blacklink" href="/TechInfo/Index/80">Технические работы на сайте 18.07.2023</a>
+        </div>
+</div>
+ 
+            <a class="button button_light anons-news-tech__button" href="/TechInfo">Все сообщения</a>
+		</div>
+	</div>
+</div>
+
+
+		</div>
+		<footer class="site-footer">
+			<div class="site-footer__social" style="top: 3px;">
+				<a href="https://t.me/edisclosure" target="_blank" title="telegram">
+					<img src="/images/telegram.png" width="30" height="30" />
+				</a>
+			</div>
+			<div class="site-footer__menu">
+				<ul class="menulist">
+					<li><a class="dash" href="/poisk-po-kompaniyam">поиск по компаниям</a> </li>
+					<li><a class="dash" href="/poisk-po-soobshheniyam">поиск по сообщениям</a> </li>
+					<li><a class="dash" href="/servisy-dlya-kompanij">сервисы для компаний</a> </li>
+					<li><a class="dash" href="/vse-o-raskrytii">всё о раскрытии</a> </li>
+					<li><a href="/o-proekte">о проекте</a> </li>
+				</ul>
+			</div>
+			<table class="noBorderTbl">
+				<tbody>
+					<tr>
+						<td style="vertical-align:top; width:27%" rowspan="3">
+							<p>
+								Служба раскрытия информации Интерфакс-ЦРКИ:<br>
+								тел.: +7 (495) 787-5213, 8-800-200-4818<br>
+								email: <a href="mailto:dc1@e-disclosure.ru">dc1@e-disclosure.ru</a>
+							</p>
+							<p>График работы: с 08.00 до 20.00 мск по рабочим дням</p>
+						</td>
+						<td style="height:30px">
+							<span class="dash">© 2023 Интерфакс-ЦРКИ. Все права защищены </span>
+							<span class="dash">
+								<a href="/PortalContent/DisplayPage/14">Условия использования информации</a>
+							</span>
+							<span class="dash">
+								<a href="/politika-obrabotki-i-zashchity-personalnyh-dannyh">Политика обработки и защиты персональных данных</a>
+							</span>
+							<span>Разработка:&nbsp;<a href="http://www.webfm.ru/" target="_blank">web.finmarket</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Сетевое издание «Центр раскрытия корпоративной информации».
+							Свидетельство о регистрации СМИ ЭЛ № ФС77-64320 выдано Федеральной службой по надзору в сфере связи,
+							информационных технологий и массовых коммуникаций (Роскомнадзор) 25 декабря 2015 года. Учредитель ООО «Инфоком». Главный редактор Горбатова С.В.<br />12+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<br />
+							<!-- Top100 (Kraken) Widget -->
+							<span id="top100_widget" style="padding: 0; margin: 0;"></span>
+							<!-- END Top100 (Kraken) Widget -->
+							<!-- Rating@Mail.ru logo -->
+							<a style="text-decoration: none;" href="http://top.mail.ru/jump?from=650834">
+								<img src="//top-fwz1.mail.ru/counter?id=650834;t=501;l=1" style="border: 0;" height="31" width="88" alt="Рейтинг@Mail.ru" />
+							</a>
+							<!-- //Rating@Mail.ru logo -->
+							<!-- Yandex.Metrika informer -->
+							<a href="https://metrika.yandex.ru/stat/?id=53780800&amp;from=informer"
+							   target="_blank"
+							   rel="nofollow"
+							   style="text-decoration: none;">
+								<img src="https://informer.yandex.ru/informer/53780800/3_0_FFFFFFFF_FFFFFFFF_0_pageviews"
+									 style="width: 88px; height: 31px; border: 0;"
+									 alt="Яндекс.Метрика"
+									 title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+									 class="ym-advanced-informer"
+									 data-cid="53780800"
+									 data-lang="ru" />
+							</a>
+							<!-- /Yandex.Metrika informer -->
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</footer>
+	</div>
+	<input name="__RequestVerificationToken" type="hidden" value="CfDJ8KGBqhstQ8xJuxrwCFpEqRzlqpnSnmRqCKUc5y9ux7XqyyOurzawO7_eEuqLPVzNTSWXl_DAL9hOkvTl1y5esd9pQknb6kdhicmqenUayEQUYHBOs-V5C96mGiNohD93C2hp6aw-43iq8TuJ1ASnd7Y" />
+	<div id="CookieWarningPopup">
+	На этом сайте используются файлы cookie. Оставаясь на www.e-disclosure.ru, Вы соглашаетесь с <a href="https://e-disclosure.ru/politika-obrabotki-i-zashchity-personalnyh-dannyh" target="_blank">Политикой обработки и защиты персональных данных</a>.
+	<button type="button" id="AcceptCookieBtn" class="button2" style="margin-left: 5px;">ОК</button>
+</div>
+    <div id="modalLayout"></div>
+	
+			<script>
+				window.yaContextCb.push(() => {
+					Ya.adfoxCode.create({
+						ownerId: 1464683,
+						containerId: "adfox_168173373305942583",
+						params: { p1: 'cxzbm', p2: 'iibj' }
+					});
+				});
+			</script>
+			<script>
+				window.yaContextCb.push(() => {
+					Ya.adfoxCode.create({
+						ownerId: 1464683,
+						containerId: "adfox_168173386396589028",
+						params: { p1: 'cxzbn', p2: 'iibk' }
+					});
+				});
+			</script>
+			<script>
+				window.yaContextCb.push(() => {
+					Ya.adfoxCode.create({
+						ownerId: 1464683,
+						containerId: "adfox_16817338660869469",
+						params: { p1: 'cxzbo', p2: 'iibl' }
+					});
+				});
+			</script>
+			<script>
+				window.yaContextCb.push(() => {
+					Ya.adfoxCode.create({
+						ownerId: 1464683,
+						containerId: "adfox_168173386897027439",
+						params: { p1: 'cxzbr', p2: 'iibm' }
+					});
+				});
+			</script>
+			<script>
+				window.yaContextCb.push(() => {
+					Ya.adfoxCode.create({
+						ownerId: 1464683,
+						containerId: "adfox_168173387120063137",
+						params: { p1: 'cxzbs', p2: 'iibn' }
+					});
+				});
+			</script>
+
+	<!-- Top100 (Kraken) Counter -->
+	<script>
+		(function (w, d, c) {
+			(w[c] = w[c] || []).push(function () {
+				var options = {
+					project: 2928424,
+					element: 'top100_widget',
+				};
+				try {
+					w.top100Counter = new top100(options);
+				} catch (e) {
+				}
+			});
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src =
+				(d.location.protocol == "https:" ? "https:" : "http:") +
+				"//st.top100.ru/top100/top100.js";
+
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+		})(window, document, "_top100q");
+	</script>
+    <!-- END Top100 (Kraken) Counter -->
+</body>
+</html>

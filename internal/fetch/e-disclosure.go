@@ -12,8 +12,43 @@ import (
 	"path"
 	"strings"
 
-	"github.com/alekphilly/ReportsDownloader-go/internal/models"
+	"github.com/AlekPhilly/ReportsDownloader-go/internal/models"
 )
+
+func DownloadReportToBrowser(sess *Session, rep *models.Report, w http.ResponseWriter) {
+	cookies := sess.Cookie
+
+	req, err := http.NewRequest(http.MethodGet, rep.FileLink, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	req.Header.Set("User-Agent", userAgent)
+
+	for _, c := range cookies {
+		req.AddCookie(c)
+	}
+
+	client := newClient()
+
+	res, err := client.Do(req)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// v := res.Header["Content-Disposition"][0]
+	// filename := strings.TrimSpace(strings.Replace(strings.Split(v, ";")[1], "filename=", "", 1))
+	// filename = strings.ReplaceAll(filename, "\"", "")
+	// filename = strings.ReplaceAll(filename, "'", "")
+
+	defer res.Body.Close()
+
+	w.Header().Set("Content-Disposition", res.Header.Get("Content-Disposition"))
+	w.Header().Set("Content-Type", res.Header.Get("Content-Type"))
+	w.Header().Set("Content-Length", res.Header.Get("Content-Length"))
+
+	io.Copy(w, res.Body)
+}
 
 func DownloadReport(sess *Session, rep *models.Report, dstDir string) string {
 	cookies := sess.Cookie

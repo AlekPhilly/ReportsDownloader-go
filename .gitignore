@@ -1,6 +1,6 @@
-*.html
 *.json
 *.txt
+*.exe
 reports/*
 main
 reportsDl
