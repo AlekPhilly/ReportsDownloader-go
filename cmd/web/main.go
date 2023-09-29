@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -16,10 +17,14 @@ func main() {
 	mux.HandleFunc("/search", handlers.Search)
 	mux.HandleFunc("/download", handlers.Download)
 
+	fileSrv := http.FileServer(http.Dir("./static/"))
+	mux.Handle("/static/", http.StripPrefix("/static", fileSrv))
+
 	srv := &http.Server{
 		Addr:    PORT,
 		Handler: mux,
 	}
 
+	fmt.Printf("Starting web server at 127.0.0.1%s...\n", PORT)
 	log.Fatal(srv.ListenAndServe())
 }

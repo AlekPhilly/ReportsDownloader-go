@@ -2,11 +2,16 @@ package handlers
 
 import (
 	"net/http"
-	"os"
+	"text/template"
 )
 
 func HomePage(w http.ResponseWriter, r *http.Request) {
-	site, _ := os.ReadFile("./html/main.html")
+	files := []string{
+		"./html/index.page.tmpl",
+		"./html/base.layout.tmpl",
+	}
 
-	w.Write(site)
+	home := template.Must(template.ParseFiles(files...))
+
+	home.Execute(w, nil)
 }

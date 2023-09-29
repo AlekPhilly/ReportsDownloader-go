@@ -1,0 +1,25 @@
+header {
+    font-style: italic;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 180%;
+}
+
+.search_btn {
+    margin-top: 1%;
+    margin-left: 20%;
+    align-items: last baseline;
+}
+
+footer {
+    color: blue;
+    margin-top: auto;
+}
+
+header, body, footer {
+    width: fit-content;
+}

@@ -1,0 +1,23 @@
+{{template "base" .}}
+
+{{define "title"}}Поиск отчетности компаний{{end}}
+
+{{define "header"}}{{.Info.Name}}{{end}}
+
+{{define "content"}}
+<div>
+    <h3>Найдены отчеты:</h3>
+    <div>
+        <form action="/download" method="post">
+            <fieldset>
+                <ol>
+                    {{range $idx, $rep := .Reports}}
+                    <li><label>{{$rep.ReportType}} {{$rep.ReportPeriod}} <input type="radio" name="radio" value={{$idx}}></label></li>
+                    {{end}}
+                </ol>
+                <button type="submit">Скачать</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+{{end}}
