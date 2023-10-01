@@ -8,16 +8,11 @@
 <div>
     <h3>Найдены отчеты:</h3>
     <div>
-        <form action="/download" method="post">
-            <fieldset>
-                <ol>
-                    {{range $idx, $rep := .Reports}}
-                    <li><label>{{$rep.ReportType}} {{$rep.ReportPeriod}} <input type="radio" name="radio" value={{$idx}}></label></li>
-                    {{end}}
-                </ol>
-                <button type="submit">Скачать</button>
-            </fieldset>
-        </form>
+        <ol>
+            {{range $idx, $rep := .Reports}}
+            <li><a href="/download?id={{$idx}}">{{$rep.ReportPeriod}} - {{$rep.ReportType}}</a></li>
+            {{end}}
+        </ol>
     </div>
 </div>
 {{end}}

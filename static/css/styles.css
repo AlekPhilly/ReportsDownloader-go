@@ -28,6 +28,11 @@ body {
     justify-content: center;
 }
 
+#btn {
+    margin-top: 15px;
+    padding: 10px 10px 10px 10px;
+}
+
 footer {
     margin-top: auto;
     color: blue;

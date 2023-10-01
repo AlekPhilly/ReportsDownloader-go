@@ -58,8 +58,3 @@ func Search(w http.ResponseWriter, r *http.Request) {
 
 	resPage.Execute(w, data)
 }
-
-func Download(w http.ResponseWriter, r *http.Request) {
-	idx, _ := strconv.Atoi(r.FormValue("radio"))
-	fetch.DownloadReportToBrowser(sess, &data.Reports[idx], w)
-}
