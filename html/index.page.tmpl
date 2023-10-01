@@ -6,21 +6,24 @@
 
 {{define "content"}}
 <form action="/search" method="post">
-    <div>
-        <label for=ticker>Введите тикер компании:</label>
-        <input type="search" name="ticker" id="tickerInput" required minlength="4" maxlength="4">
+    <div class="container select">
+        <div>
+            <label for=ticker>Введите тикер компании:</label>
+            <input type="search" name="ticker" id="tickerInput" required minlength="4" 
+                    maxlength="4" placeholder="Тикер">
+        </div>
+        <div>
+            <label for="reportType">Выберите тип отчета:</label>
+            <select name="reportType" id="reportType">
+                <option value=2>Годовые отчеты</option>
+                <option value=3>Бухгалтерская отчетность</option>
+                <option value=4>Отчеты по МСФО</option>
+                <option value=5>Отчеты эмитента</option>
+            </select>
+        </div>
     </div>
-    <div>
-        <label for="reportType">Выберите тип отчета:</label>
-        <select name="reportType" id="reportType">
-            <option value=2>Годовые отчеты</option>
-            <option value=3>Бухгалтерская отчетность</option>
-            <option value=4>Отчеты по МСФО</option>
-            <option value=5>Отчеты эмитента</option>
-        </select>
-    </div>
-    <div>
-        <input class="search_btn" type="submit" value="Искать!">
+    <div class="container search">
+        <input type="submit" value="Искать!">
     </div>
 </form>
 {{end}}
